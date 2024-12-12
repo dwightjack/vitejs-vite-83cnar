@@ -12,7 +12,7 @@
   "dependencies": {
     "sakura.css": "^1.4.1",
     "vue": "^3.2.45",
-    "vue-types": "0.0.0-20241212014929"
+    "vue-types": "^6.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
