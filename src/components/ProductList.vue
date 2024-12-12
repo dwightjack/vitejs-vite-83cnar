@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import { arrayOf } from 'vue-types';
+import { arrayOf, object } from 'vue-types';
 import ListItem from './ListItem.vue';
 
+type Item = Omit<InstanceType<typeof ListItem>, `$${string}`>;
+
 defineProps({
-  list: arrayOf(ListItem.props),
+  list: arrayOf(object<Item>()),
 });
 </script>
 <template>

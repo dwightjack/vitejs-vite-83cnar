@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import VueTypes, { integer } from 'vue-types';
+import { integer, number, string } from 'vue-types';
 import Availability from './Availability.vue';
 import { statusType } from '../types';
+
 defineProps({
   id: integer().isRequired,
   // namespaced validators as well
-  description: VueTypes.string.isRequired,
-  price: VueTypes.number.def(0),
+  description: string().def('').isRequired,
+  price: number().def(0),
   status: statusType(),
 });
+
 </script>
 <template>
   <li>
